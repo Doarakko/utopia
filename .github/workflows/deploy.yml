@@ -44,3 +44,4 @@ jobs:
         SLACK_SERVICE_TOKEN: ${{ secrets.SLACK_SERVICE_TOKEN }}
       run: |
         slack deploy -s --token $SLACK_SERVICE_TOKEN
+        slack trigger update --trigger-id=yyyy
