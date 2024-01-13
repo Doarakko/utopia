@@ -34,6 +34,9 @@ const trigger: Trigger<typeof Workflow.definition> = {
               }
             ]
           },
+          {
+            statement: "{{data.app_id}} == null",
+          },
         ],
       },
     },
