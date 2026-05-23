@@ -15,18 +15,18 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
     # Slack CLI requires Deno runtime
     - name: Install Deno runtime
-      uses: denoland/setup-deno@v1
+      uses: denoland/setup-deno@11b63cf76cfcafb4e43f97b6cad24d8e8438f62d # v1.5.2
       with:
         # Using the latest stable version along with Slack CLI is recommend
         deno-version: v1.x
 
     - name: Cache Slack CLI installation
       id: cache-slack
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
       with:
         path: |
           /usr/local/bin/slack
